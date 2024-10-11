@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de Javascript</title>
+</head>
+<body>
+    <label for="inputNome">Digite seu nome:</label>
+    <input id="inputNome" type="text"/>
+    <label for="inputIdade">Informe a sua idade:</label>
+    <input id="inputIdade" type="number"/>
+    <button id="btnSalvar" onclick="exibirDados()">Salvar</button>
+
+    <h1>O nome informado é: </h1>
+    <h4 id="nome"></h4>
+    <h1>E a idade informada: </h1>
+    <h4 id="idade"></h4>
+        
+    <script>
+        let altura = 1.90 //FLOAT
+        let tem_habilitacao = false // BOOLEAN
+        let sabe_dirigir = false // BOOLEAN
+
+        function exibirDados() {
+            let nomeCompleto = document.getElementById("inputNome").value
+            let idade = document.getElementById("inputIdade").value
+
+            document.getElementById("nome").innerHTML = nomeCompleto
+            document.getElementById("idade").innerHTML = idade
+
+            document.getElementById("inputNome").value = ''
+            document.getElementById("inputIdade").value = ''
+        }
+    </script>
+</body>
+</html>
