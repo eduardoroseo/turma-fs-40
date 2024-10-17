@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula de Javascript</title>
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <style>
+        .green {
+            background-color: green;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    <label for="inputNome">Digite seu nome:</label>
-    <input id="inputNome" type="text"/>
-    <label for="inputIdade">Informe a sua idade:</label>
-    <input id="inputIdade" type="number"/>
-    <button id="btnSalvar" onclick="exibirDados()">Salvar</button>
-
-    <h1>O nome informado é: </h1>
-    <h4 id="nome"></h4>
-    <h1>E a idade informada: </h1>
-    <h4 id="idade"></h4>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col green">Coluna 01</div>
+            <div class="col green">Coluna 02</div>
+            <div class="col green">Coluna 03</div>
+            <div class="col green">Coluna 04</div>
+        </div>
+    </main>
         
     <script>
         let altura = 1.90 //FLOAT
