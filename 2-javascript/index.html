@@ -5,39 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula de Javascript</title>
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
-    <script src="bootstrap/bootstrap.min.js"></script>
-    <style>
-        .green {
-            background-color: green;
-            border: 1px solid black;
-        }
-    </style>
 </head>
 <body>
-    <main class="container-fluid">
-        <div class="row">
-            <div class="col green">Coluna 01</div>
-            <div class="col green">Coluna 02</div>
-            <div class="col green">Coluna 03</div>
-            <div class="col green">Coluna 04</div>
+    <main class="container">
+        <div class="row mt-3">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <label for="nome-aluno" class="form-label">Insira o nome do aluno:</label>
+                <input id="nome-aluno" type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <label for="nota1" class="form-label">Insira a primeira nota:</label>
+                <input id="nota1" type="number" class="form-control" />
+            </div>
+            <div class="col">
+                <label for="nota2" class="form-label">Insira a segunda nota:</label>
+                <input id="nota2" type="number" class="form-control" />
+            </div>
+            <div class="col">
+                <label for="nota3" class="form-label">Insira a terceira nota:</label>
+                <input id="nota3" type="number" class="form-control" />
+            </div>
+        </div>
+        <div class="row mt-3 justify-content-center">
+            <div class="d-grid col mx-auto">
+                <button type="button" class="btn btn-primary" onclick="calcularMedia()">Calcular</button>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <p id="resultado"></p>
+            </div>
         </div>
     </main>
         
-    <script>
-        let altura = 1.90 //FLOAT
-        let tem_habilitacao = false // BOOLEAN
-        let sabe_dirigir = false // BOOLEAN
-
-        function exibirDados() {
-            let nomeCompleto = document.getElementById("inputNome").value
-            let idade = document.getElementById("inputIdade").value
-
-            document.getElementById("nome").innerHTML = nomeCompleto
-            document.getElementById("idade").innerHTML = idade
-
-            document.getElementById("inputNome").value = ''
-            document.getElementById("inputIdade").value = ''
-        }
-    </script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
