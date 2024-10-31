@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <div class="row mt-2">
+            <div class="col">
+                <p>
+                    Faça um algoritmo que calcule o valor da conta de luz de uma pessoa.
+                    Sabe-se que o cálculo da conta de luz segue a tabela abaixo:
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Tipo Cliente</th>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Residência</td>
+                                <td>R$ 0,60 kw/h</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Comércio</td>
+                                <td>R$ 0,48 kw/h</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Indústria</td>
+                                <td>R$ 1,29 kw/h</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    O algoritmo deve solicitar o tipo do cliente (1, 2 ou 3) e o consumo mensal em KW/h.
+                    Ao final, o algoritmo deve informar o valor a ser pago.
+                </p>
+            </div>
+        </div>
+        <div class="row align-items-end">
+        </div>
+        <div class="row mt-1">
+            <div class="col">
+                <p id="resultado"></p>
+            </div>
+        </div>
+    </main>
+        
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="js/script2.js"></script>
+</body>
+</html>
