@@ -4,5 +4,9 @@ document.getElementById("btnCalcular").addEventListener('click', function() {
 
     let resultado = numero1 + numero2
 
-    alert(resultado)
+    document.getElementById('resultado').innerHTML = 
+        `O resultado da soma é: <strong>${resultado}</strong>.`
+
+    document.getElementById('numero1').value = ''
+    document.getElementById('numero2').value = ''
 })
