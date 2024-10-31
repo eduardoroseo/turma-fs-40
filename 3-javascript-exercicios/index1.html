@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <div class="row">
+            <div class="col">
+                <p>
+                    Faça um algoritmo que receba dois números e exiba o resultado da sua soma.
+                </p>
+            </div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col">
+                <label for="numero1" class="form-label">Insira o primeiro número:</label>
+                <input id="numero1" type="number" class="form-control" />
+            </div>
+            <div class="col">
+                <label for="numero2" class="form-label">Insira o segundo número:</label>
+                <input id="numero2" type="number" class="form-control" />
+            </div>
+            <div class="col">
+                <div class="d-grid col mx-auto">
+                    <button id="btnCalcular" type="button" class="btn btn-primary">Calcular</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p id="resultado"></p>
+            </div>
+        </div>
+    </main>
+        
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="js/script1.js"></script>
+</body>
+</html>
