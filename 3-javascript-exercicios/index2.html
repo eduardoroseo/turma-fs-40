@@ -46,6 +46,28 @@
             </div>
         </div>
         <div class="row align-items-end">
+            <div class="col">
+                <label for="nome" class="form-label">Insira o nome do cliente:</label>
+                <input id="nome" type="text" class="form-control" />
+            </div>
+            <div class="col">
+                <label for="tipo" class="form-label">Selecione o tipo do cliente:</label>
+                <select id="tipo" class="form-select" aria-label="Tipo do cliente">
+                    <option selected>--</option>
+                    <option value="1">Residência</option>
+                    <option value="2">Comércio</option>
+                    <option value="3">Indústria</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="consumoMensal" class="form-label">Insira o consumo mensal:</label>
+                <input id="consumoMensal" type="number" class="form-control" />
+            </div>
+            <div class="col">
+                <div class="d-grid col mx-auto">
+                    <button id="btnCalcular" type="button" class="btn btn-primary">Calcular</button>
+                </div>
+            </div>
         </div>
         <div class="row mt-1">
             <div class="col">
