@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta de CEP</title>
-    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle de produtos</title>
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet" />
 </head>
+
 <body>
     <main class="container">
-        <div class="row mt-3">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <label for="cep" class="form-label">Insira o CEP:</label>
-                <input id="cep" type="text" class="form-control" />
-            </div>
-        </div>
-        <div class="row mt-3 justify-content-center">
+        <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-primary" onclick="consultarCEP()">Consultar</button>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col">
-                <p id="resultado"></p>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Preço</th>
+                            <th>Categoria</th>
+                            <th>Foto</th>
+                            <th>Avaliação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-produtos">
+                    </tbody>
+                </table>
             </div>
         </div>
     </main>
-        
+
     <script src="bootstrap/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
 </body>
+
 </html>
