@@ -1,7 +1,7 @@
 async function listarProdutos() {
   try {
     const response = 
-      await fetch("https://fakestoreapi.com/products")
+      await fetch("https://fakestoreapi.com/products?sort=desc")
 
     const products = await response.json()
 
