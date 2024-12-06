@@ -1,7 +1,7 @@
 async function listarProdutos() {
   try {
     const response = 
-      await fetch("https://fakestoreapi.com/products?sort=desc")
+      await fetch("http://localhost:3000/products?_sort=id")
 
     const products = await response.json()
 
@@ -34,8 +34,62 @@ async function listarProdutos() {
   console.log("FIM DA FUNÇÃO")
 }
 
+async function criarProduto(product) {
+  try {
+    const params = {
+      method: "POST",
+      body: JSON.stringify(product),
+      headers: { //instrução não obrigatório
+        "Content-Type": "application/json"
+      }
+    }
+    
+    await fetch("http://localhost:3000/products", params)
+
+    listarProdutos()
+    fecharModal()
+    limparForm()
+
+    alert("Produto cadastrado com sucesso!")
+  } catch (e) {
+    console.log(e)
+    alert("erro ao salvar o produto")
+  }
+}
+
+function fecharModal() {
+  const modalElement = document.getElementById("form-produto")
+  const modal = bootstrap.Modal.getInstance(modalElement)
+
+  modal.hide()
+}
+
+function limparForm() {
+  document.getElementById("title").value = ""
+  document.getElementById("price").value = ""
+  document.getElementById("category").value = ""
+  document.getElementById("image").value = ""
+  document.getElementById("rating").value = ""
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   listarProdutos()
+
+  document.getElementById("form-new-product").onsubmit = async (e) => {
+    e.preventDefault()
+
+    const product = {
+      title: document.getElementById("title").value,
+      price: document.getElementById("price").value,
+      category: document.getElementById("category").value,
+      image: document.getElementById("image").value,
+      rating: {
+        rate: document.getElementById("rating").value
+      },
+    }
+
+    criarProduto(product)
+  }
 })
 
 
